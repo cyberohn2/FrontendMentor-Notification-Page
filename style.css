@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+:root{
+ /*COLOR VARIABLES*/
+    /*primary color*/
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    /*neutral colors*/
+    --White: hsl(0, 0%, 100%);
+    --Verylightgrayishblue: hsl(210, 60%, 98%);
+    --Lightgrayishblue1: hsl(211, 68%, 94%);
+    --Lightgrayishblue2: hsl(205, 33%, 90%);
+    --Grayishblue: hsl(219, 14%, 63%);
+    --Darkgrayishblue: hsl(219, 12%, 42%);
+    --Verydarkblue: hsl(224, 21%, 14%);
+
+/*FONTS VARIABLE*/
+    --fs:16px;
+    --fw-500: 500;
+    --fw-800: 800;
+    --ff: 'Plus Jakarta Sans', sans-serif;
+}
+/*MARGIN AND PADDING RESETS*/
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--ff);
+    transition: all ease-out 100ms;
+}
+
+/*UTILITY CLASSES*/
+.flexbox{
+    display: flex;
+    align-items: center;
+}
+.grid-container{
+    display: grid;
+}
+
+/* ---------- */
+/* notification container will only be centered on large screens */
+@media screen and (min-width: 820px) {
+    body{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Verylightgrayishblue);
+}
+main{
+    width: 650px;
+    max-width: 100%;
+    margin-inline: auto;
+    background-color: var(--White);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border-radius: .8rem;
+    box-shadow: 0 0 20px hsl(220, 22%, 86%);
+}
+}
+@media screen and (max-width: 820px) {
+    main{
+        padding: 2rem;
+    }
+}
+
+h2,h3{
+    color: var(--Verydarkblue);
+}
+.header{
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width: 820px) {
+    .title{
+        font-size: 12px;
+    }
+}
+.notification-count{
+    display: inline-block;
+    align-items: center;
+    background-color: var(--blue);
+    color: white;
+    width: 35px;
+    height: 30px;
+    border-radius: .4rem;
+    text-align: center;
+    vertical-align: middle;
+}
+@media screen and (max-width: 820px) {
+    .notification-count{
+        width: 27px;
+        height: 25px;
+    }
+}
+.mark-notification:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+.notification{
+    grid-template-columns: 10% 90%;
+    padding: .4rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+    font-size: .8rem;
+}
+.notification[data-read="false"]{
+    background-color: var(--Lightgrayishblue2);
+}
+.user-img{
+    max-width: 50px;
+}
+@media screen and (max-width:820px) {
+    .user-img{
+        margin-right: .5rem;
+    }
+}
+.notification-type,.time{
+    color: var(--Grayishblue);
+    font-size: 500;
+}
+.notification-status[data-status="unread"]{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--red);
+}
+.notification-reference{
+    color: var(--Darkgrayishblue);
+}
+.notification-reference:hover{
+    cursor: pointer;
+    color: var(--blue);
+}
+.notification-reference2[data-type="text"]{
+    margin-block: .6rem;
+    border: 1px solid var(--Lightgrayishblue2);
+    padding: 1rem;
+    border-radius: .4rem;
+    font-weight: 500;
+    font-size: var(--fs);
+    color: var(--Darkgrayishblue);
+}
+.notification-reference2[data-type="text"]:hover{
+    background-color: var(--Lightgrayishblue2);
+}
+/* I SHOULD HAVE ADDED THE EXTRA CONTAINER TO ALL THE NOTIFICATION CONTAINERS, BUT I DON'T THINK IT'S ACTUALLY NECESSARY IN THIS CASE SINCE I'M ONLY COPYING A DESIGN :) */
+.extra-container{
+    justify-content: space-between;
+}
+.notification-reference2[data-type="image"]{
+    max-width: 50px;
+}
+.notification-reference2[data-type="image"]:hover{
+    transform: scale(.9,.9);
+    cursor: pointer;
+}

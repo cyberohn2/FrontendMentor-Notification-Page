@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Notifications page</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head> 
+<body>
+  <main>
+      <div class="header flexbox">
+          <div class="title">
+            <h2>Notifications <span class="notification-count">3</span></h2> 
+          </div>
+          <p class="mark-notification">Mark all as read</p>
+      </div>
+      <div class="notification-container">
+            <div data-read="false" class="notification  grid-container">
+              <div class="user-img">
+                <img src="./images/avatar-mark-webber.webp" width="100%" alt="">
+              </div>
+              <div class="notification-description">
+                <h3>Mark Webber 
+                  <span class="notification-type">reacted to your recent post</span> 
+                  <span class="notification-reference">My first tournament today!</span> 
+                  <span class="notification-status" data-status="unread"></span>
+                </h3>
+                <p class="time">1m ago</p>
+              </div>
+            </div>
+            <div data-read="false" class="notification  grid-container">
+              <div class="user-img"><img src="./images/avatar-angela-gray.webp" width="100%" alt=""></div>
+              <div class="notification-description">
+                <h3>Angela Gray 
+                  <span class="notification-type">followed you</span> 
+                  <span class="notification-reference"></span> 
+                  <span class="notification-status" data-status="unread"></span>
+                </h3>
+                <p class="time">5m ago</p>
+              </div>
+            </div>
+            <div data-read="false" class="notification  grid-container">
+              <div class="user-img"><img src="./images/avatar-jacob-thompson.webp" width="100%" alt=""></div>
+              <div class="notification-description">
+                <h3>Jacob Thompson 
+                  <span class="notification-type">has joined your group</span> 
+                  <span class="notification-reference link-text">Chess Club</span> 
+                  <span class="notification-status" data-status="unread"></span>
+                </h3>
+                <p class="time">1 day ago</p>
+              </div>
+            </div>
+            <div data-read="true" class="notification  grid-container">
+              <div class="user-img">
+                <img src="./images/avatar-rizky-hasanuddin.webp" width="100%" alt="">
+              </div>
+              <div class="notification-description">
+                <h3>Rizky Hasanuddin 
+                  <span class="notification-type">sent you a private message</span> 
+                  <span class="notification-reference"></span> 
+                  <span class="notification-status" data-status="read"></span>
+                </h3>
+                <p class="time">5 days ago</p>
+                <div class="notification-reference2" data-type="text">
+                  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+                  I'm already having lots of fun and improving my game.
+                </div>
+              </div>
+            </div>
+            <div data-read="true" class="notification  grid-container">
+              <div class="user-img">
+                <img src="./images/avatar-kimberly-smith.webp" width="100%" alt="">
+              </div>
+              <div class="extra-container flexbox">
+                <div class="notification-description">
+                <h3>Kimberly Smith
+                  <span class="notification-type">commented on your picture</span> 
+                  <span class="notification-reference"></span> 
+                  <span class="notification-status" data-status="read"></span>
+                </h3>
+                <p class="time">1 week ago</p>
+              </div>
+              <div class="notification-reference2" data-type="image"><img src="./images/image-chess.webp" width="100%" alt=""></div>
+            </div>
+              </div>
+            <div data-read="true" class="notification  grid-container">
+              <div class="user-img"><img src="./images/avatar-nathan-peterson.webp" width="100%" alt=""></div>
+              <div class="notification-description">
+                <h3>Nathan Peterson 
+                  <span class="notification-type">reacted to your recent post</span> 
+                  <span class="notification-reference">5 end-game strategies to increase your win rate</span> 
+                  <span class="notification-status" data-status="read"></span>
+                </h3>
+                <p class="time">2 weeks ago</p>
+              </div>
+            </div>
+            <div data-read="true" class="notification  grid-container">
+              <div class="user-img"><img src="./images/avatar-anna-kim.webp" width="100%" alt=""></div>
+              <div class="notification-description">
+                <h3>Anna Kim 
+                  <span class="notification-type">left the group</span> 
+                  <span class="notification-reference link-text">Chess Club</span> 
+                  <span class="notification-status" data-status="read"></span>
+                </h3>
+                <p class="time">2 weeks ago</p>
+              </div>
+            </div>
+      </div>
+  </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Cyberohn</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>
